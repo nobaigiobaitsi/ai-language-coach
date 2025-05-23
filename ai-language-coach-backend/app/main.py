@@ -1,17 +1,15 @@
-# Have to make some things again. Don't forget, connect it to frontend.
-# For now, quiz generator and  I want to make an essay feedback generator.
-# Now, quiz generator gives multiple choice questions with 4 options.
-# Will add more quiz types.
-
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-
-# need this to validate the request body(!important!don't delete)
 import openai
 import os
 from dotenv import load_dotenv
 
-# this reads my keys(!important!don't delete)
+# "from dotenv import load_dotenv" this reads my keys
+# "from pydantic import BaseModel" need this to validate the request body
+# Have to make some things again. Don't forget, connect it to frontend.
+# For now, quiz generator and  I want to make an essay feedback generator.
+# Now, quiz generator gives multiple choice questions with 4 options.
+# Will add more quiz types.
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
